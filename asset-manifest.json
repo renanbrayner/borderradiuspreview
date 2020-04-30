@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/borderradiuspreview/static/css/main.c3097d0d.chunk.css",
+    "main.js": "/borderradiuspreview/static/js/main.f429b72f.chunk.js",
+    "main.js.map": "/borderradiuspreview/static/js/main.f429b72f.chunk.js.map",
+    "runtime-main.js": "/borderradiuspreview/static/js/runtime-main.067236d9.js",
+    "runtime-main.js.map": "/borderradiuspreview/static/js/runtime-main.067236d9.js.map",
+    "static/js/2.d62799b4.chunk.js": "/borderradiuspreview/static/js/2.d62799b4.chunk.js",
+    "static/js/2.d62799b4.chunk.js.map": "/borderradiuspreview/static/js/2.d62799b4.chunk.js.map",
+    "index.html": "/borderradiuspreview/index.html",
+    "precache-manifest.163ff295f7a1f596b8f4559b47d1ab37.js": "/borderradiuspreview/precache-manifest.163ff295f7a1f596b8f4559b47d1ab37.js",
+    "service-worker.js": "/borderradiuspreview/service-worker.js",
+    "static/css/main.c3097d0d.chunk.css.map": "/borderradiuspreview/static/css/main.c3097d0d.chunk.css.map",
+    "static/js/2.d62799b4.chunk.js.LICENSE.txt": "/borderradiuspreview/static/js/2.d62799b4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.067236d9.js",
+    "static/js/2.d62799b4.chunk.js",
+    "static/css/main.c3097d0d.chunk.css",
+    "static/js/main.f429b72f.chunk.js"
+  ]
+}
