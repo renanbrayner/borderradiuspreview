@@ -87,7 +87,7 @@ function App() {
     <div className='App'>
       <h1>Border Radius Previewer</h1>
       <h2>stop strugling with border radius.</h2>
-      <p className='branding'>brought to you by <a href='https://github.com/renanbrayner' target='_blank' rel="noopener noreferrer">Renan Brayner.</a></p>
+      <p className='branding'>brought to you by <a href='https://renanbrayner.github.io/portfolio/' target='_blank' rel="noopener noreferrer">Renan Brayner.</a></p>
 
       <div className='div-sliders-container'>
         <div className='horizontal-sliders-container'>
