@@ -1,73 +1,72 @@
 import React, { useState } from 'react';
-import Slider from 'react-input-slider';
 import './App.css';
 
 function App() {
   // RX
-  const [topLeftRx, setTopLeftRx] = useState('38%')
-  const [topRightRx, setTopRightRx] = useState('73%')
-  const [bottomLeftRx, setBottomLeftRx] = useState('36%')
-  const [bottomRightRx, setBottomRightRx] = useState('75%')
+  const [topLeftRx, setTopLeftRx] = useState('38')
+  const [topRightRx, setTopRightRx] = useState('73')
+  const [bottomLeftRx, setBottomLeftRx] = useState('36')
+  const [bottomRightRx, setBottomRightRx] = useState('75')
   // RY
-  const [topLeftRy, setTopLeftRy] = useState('65%')
-  const [topRightRy, setTopRightRy] = useState('69%')
-  const [bottomLeftRy, setBottomLeftRy] = useState('31%')
-  const [bottomRightRy, setBottomRightRy] = useState('47%')
+  const [topLeftRy, setTopLeftRy] = useState('65')
+  const [topRightRy, setTopRightRy] = useState('69')
+  const [bottomLeftRy, setBottomLeftRy] = useState('31')
+  const [bottomRightRy, setBottomRightRy] = useState('47')
 
   // HANDLE INPUTS CHANGE
   const handleTopLeftRx = (e) => {
-    const textInput = e.x;
+    const textInput = e.target.value;
     const stringText = textInput.toString();
-    const final = stringText.concat('%');
+    const final = stringText;
     setTopLeftRx(final);
   }
 
   const handleTopRightRx = (e) => {
-    const textInput = e.x;
+    const textInput = e.target.value;
     const stringText = textInput.toString();
-    const final = stringText.concat('%');
+    const final = stringText;
     setTopRightRx(final);
   }
 
   const handleTopLeftRy = (e) => {
-    const textInput = e.y;
+    const textInput = e.target.value;
     const stringText = textInput.toString();
-    const final = stringText.concat('%');
+    const final = stringText;
     setTopLeftRy(final);
   }
 
   const handleBottomLeftRy = (e) => {
-    const textInput = e.y;
+    const textInput = e.target.value;
     const stringText = textInput.toString();
-    const final = stringText.concat('%');
+    const final = stringText;
     setBottomLeftRy(final);
   }
 
   const handleTopRightRy = (e) => {
-    const textInput = e.y;
+    const textInput = e.target.value;
     const stringText = textInput.toString();
-    const final = stringText.concat('%');
+    const final = stringText;
     setTopRightRy(final);
   }
 
   const handleBottomRightRy = (e) => {
-    const textInput = e.y;
+    const textInput = e.target.value;
     const stringText = textInput.toString();
-    const final = stringText.concat('%');
+    const final = stringText;
     setBottomRightRy(final);
   }
 
   const handleBottomLeftRx = (e) => {
-    const textInput = e.x;
+    const textInput = e.target.value;
     const stringText = textInput.toString();
-    const final = stringText.concat('%');
+    const final = stringText;
     setBottomLeftRx(final);
   }
 
   const handleBottomRightRx = (e) => {
-    const textInput = e.x;
+    const textInput = e.target.value;
     const stringText = textInput.toString();
-    const final = stringText.concat('%');
+    const final = stringText;
     setBottomRightRx(final);
   }
 
@@ -91,104 +90,80 @@ function App() {
 
       <div className='div-sliders-container'>
         <div className='horizontal-sliders-container'>
-          <Slider
-            styles={{
-              active: {
-                backgroundColor: '#27496d'
-              }
-            }}
-            x={topLeftRx.slice(0, -1)}
-            axis='x'
+          {/* sliders on top */}
+          <input
+            className='slider'
+            type='range'
+            min='0'
+            max='100'
             onChange={handleTopLeftRx}
           />
-          <Slider
-            styles={{
-              active: {
-                backgroundColor: '#27496d'
-              }
-            }}
-            x={topRightRx.slice(0, -1)}
-            axis='x'
-            xreverse={true}
+          <input
+            className='slider invert-horizontal'
+            type='range'
+            min='0'
+            max='100'
             onChange={handleTopRightRx}
           />
         </div>
         <div className='vertical-sliders-div-container'>
-          <div className='vertical-sliders'>
-            <Slider 
-              styles={{
-                active: {
-                  backgroundColor: '#27496d'
-                }
-              }}
-              y={topLeftRy.slice(0, -1)}
-              axis='y'
-              onChange={handleTopLeftRy}
-            />
-            <Slider 
-              styles={{
-                active: {
-                  backgroundColor: '#27496d'
-                }
-              }}
-              y={bottomLeftRy.slice(0, -1)}
-              axis='y'
-              yreverse={true}
-              onChange={handleBottomLeftRy}
-            />
+          <div className='vertical-sliders-left'>
+            {/* sliders on left */}
+            <input
+            className='slider vertical'
+            type='range'
+            min='0'
+            max='100'
+            onChange={handleTopLeftRy}
+          />
+          <input
+            className='slider invert-vertical'
+            type='range'
+            min='0'
+            max='100'
+            onChange={handleBottomLeftRy}
+          />
           </div>
           <div 
+            className='the-div'
             style={{
               backgroundColor: '#00909e',
-              height: '400px', width: '400px',
               margin: '10px',
-              borderRadius: `${topLeftRx} ${topRightRx} ${bottomRightRx} ${bottomLeftRx} / ${topLeftRy} ${topRightRy} ${bottomRightRy} ${bottomLeftRy}`
+              borderRadius: `${topLeftRx}% ${topRightRx}% ${bottomRightRx}% ${bottomLeftRx}% / ${topLeftRy}% ${topRightRy}% ${bottomRightRy}% ${bottomLeftRy}%`
             }}
           />
-          <div className='vertical-sliders'>
-            <Slider 
-              styles={{
-                active: {
-                  backgroundColor: '#27496d'
-                }
-              }}
-              y={topRightRy.slice(0, -1)}
-              axis='y'
-              onChange={handleTopRightRy}
-            />
-            <Slider 
-              styles={{
-                active: {
-                  backgroundColor: '#27496d'
-                }
-              }}
-              y={bottomRightRy.slice(0, -1)}
-              axis='y'
-              yreverse={true}
-              onChange={handleBottomRightRy}
-            />
+          <div className='vertical-sliders-right'>
+            {/* sliders on right */}
+            <input
+            className='slider vertical'
+            type='range'
+            min='0'
+            max='100'
+            onChange={handleTopRightRy}
+          />
+          <input
+            className='slider invert-vertical'
+            type='range'
+            min='0'
+            max='100'
+            onChange={handleBottomRightRy}
+          />
           </div>
         </div>
         <div className='horizontal-sliders-container'>
-          <Slider
-            styles={{
-              active: {
-                backgroundColor: '#27496d'
-              }
-            }}
-            x={bottomLeftRx.slice(0, -1)}
-            axis='x'
+          {/* sliders on bottom */}
+          <input
+            className='slider'
+            type='range'
+            min='0'
+            max='100'
             onChange={handleBottomLeftRx}
           />
-          <Slider
-            styles={{
-              active: {
-                backgroundColor: '#27496d'
-              }
-            }}
-            x={bottomRightRx.slice(0, -1)}
-            axis='x'
-            xreverse={true}
+          <input
+            className='slider invert-horizontal'
+            type='range'
+            min='0'
+            max='100'
             onChange={handleBottomRightRx}
           />
         </div>
@@ -196,7 +171,7 @@ function App() {
 
       <div className='copy'>
         <p className='text'>border radius:</p>
-        <input className='input' type='text' value={`${topLeftRx} ${topRightRx} ${bottomRightRx} ${bottomLeftRx} / ${topLeftRy} ${topRightRy} ${bottomRightRy} ${bottomLeftRy}`} id='input'/>
+        <input className='input' type='text' value={`${topLeftRx}% ${topRightRx}% ${bottomRightRx}% ${bottomLeftRx}% / ${topLeftRy}% ${topRightRy}% ${bottomRightRy}% ${bottomLeftRy}%`} id='input'/>
         <button className='button' onClick={copyHandleClick}>Copy text</button>
       </div>
     </div>
