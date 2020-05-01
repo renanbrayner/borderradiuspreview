@@ -1,3 +1,7 @@
+.App {
+  width: 666px;
+}
+
 .App h1 {
   font-size: 3rem;
 }
@@ -83,11 +87,6 @@
   opacity: 0.6;
 }
 
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-
 .the-div{
   width: 400px;
   height: 400px;
@@ -138,9 +137,154 @@
   cursor: pointer;
 }
 
-@media (max-width: 767px) {
+@media (max-height: 768px), (max-width: 1440px) {
+  .App {
+    text-align: center;
+  }
+
+  .App h1 {
+    font-size: 2.5rem;
+  }
+
+  .App h2 {
+    font-size: 1.4em;
+    opacity: 0.7;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .the-div{
+    width: 300px;
+    height: 300px;
+  }
+
+  .App .horizontal-sliders-container {
+    width: 320px;
+  }
+
+  .App .vertical-sliders-right,
+  .App .vertical-sliders-left {
+    width: 160px;
+  }
+
+  .App .vertical-sliders-left {
+    margin-right: -77px;
+  }
+  
+  .App .vertical-sliders-right {
+    margin-left: -77px;
+  }
+
+  .copy .input,
+  .copy .button{
+    height: 42px;
+  }
+}
+
+@media (max-height: 581px), (max-width: 1024px) {
+    .App {
+    text-align: center;
+  }
+
+  .App h1 {
+    font-size: 2.5rem;
+  }
+
+  .App h2 {
+    font-size: 1.4em;
+    opacity: 0.7;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
   .the-div{
     width: 200px;
     height: 200px;
+  }
+
+  .App .horizontal-sliders-container {
+    width: 220px;
+  }
+
+  .App .vertical-sliders-right,
+  .App .vertical-sliders-left {
+    width: 110px;
+  }
+
+  .App .vertical-sliders-left {
+    margin-right: -50px;
+  }
+  
+  .App .vertical-sliders-right {
+    margin-left: -50px;
+  }
+
+  .copy .input,
+  .copy .button{
+    height: 42px;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: #00909e;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #00909e;
+    cursor: pointer;
+  }
+}
+
+@media (max-height: 580px), (max-width: 767px) {
+  .copy .text{
+    display: none;
+  }
+
+  .App {
+    width: 333px;
+  }
+
+  .App h1 {
+    font-size: 1.7rem;
+  }
+
+  .App h2 {
+    font-size: 1.1rem;
+  }
+
+  .App p {
+    font-size: 0.9rem;
+  }
+
+  .copy .input,
+  .copy .button{
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .copy {
+    flex-direction: column;
+  }
+
+  .copy .input,
+  .copy .button {
+    border-radius: 8px;
+    width: 278px;
+  }
+
+  .copy .input{
+    margin-bottom: 8px;
+  }
+
+  .App h1 {
+    font-size: 1.6rem;
   }
 }
