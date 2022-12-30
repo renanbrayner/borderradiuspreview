@@ -14,71 +14,19 @@ function App() {
   const [bottomRightRy, setBottomRightRy] = useState('47')
 
   // HANDLE INPUTS CHANGE
-  const handleTopLeftRx = (e) => {
+  const handleSliderChange = (e, setter) => {
     const textInput = e.target.value;
     const stringText = textInput.toString();
     const final = stringText;
-    setTopLeftRx(final);
-  }
-
-  const handleTopRightRx = (e) => {
-    const textInput = e.target.value;
-    const stringText = textInput.toString();
-    const final = stringText;
-    setTopRightRx(final);
-  }
-
-  const handleTopLeftRy = (e) => {
-    const textInput = e.target.value;
-    const stringText = textInput.toString();
-    const final = stringText;
-    setTopLeftRy(final);
-  }
-
-  const handleBottomLeftRy = (e) => {
-    const textInput = e.target.value;
-    const stringText = textInput.toString();
-    const final = stringText;
-    setBottomLeftRy(final);
-  }
-
-  const handleTopRightRy = (e) => {
-    const textInput = e.target.value;
-    const stringText = textInput.toString();
-    const final = stringText;
-    setTopRightRy(final);
-  }
-
-  const handleBottomRightRy = (e) => {
-    const textInput = e.target.value;
-    const stringText = textInput.toString();
-    const final = stringText;
-    setBottomRightRy(final);
-  }
-
-  const handleBottomLeftRx = (e) => {
-    const textInput = e.target.value;
-    const stringText = textInput.toString();
-    const final = stringText;
-    setBottomLeftRx(final);
-  }
-
-  const handleBottomRightRx = (e) => {
-    const textInput = e.target.value;
-    const stringText = textInput.toString();
-    const final = stringText;
-    setBottomRightRx(final);
+    setter(final);
   }
 
   //HANDLE COPY
   function copyHandleClick() {
     var copyText = document.getElementById("input");
-
     copyText.select();
     copyText.setSelectionRange(0, 99999); //FOR MOBILE DEVICES
-
     document.execCommand("copy");
-  
     alert("Copied: " + copyText.value);
   }
 
@@ -96,14 +44,14 @@ function App() {
             type='range'
             min='0'
             max='100'
-            onChange={handleTopLeftRx}
+            onChange={(e) => handleSliderChange(e, setTopLeftRx)}
           />
           <input
             className='slider invert-horizontal'
             type='range'
             min='0'
             max='100'
-            onChange={handleTopRightRx}
+            onChange={(e) => handleSliderChange(e, setTopRightRx)}
           />
         </div>
         <div className='vertical-sliders-div-container'>
@@ -114,14 +62,14 @@ function App() {
             type='range'
             min='0'
             max='100'
-            onChange={handleTopLeftRy}
+            onChange={(e) => handleSliderChange(e, setTopLeftRy)}
           />
           <input
             className='slider invert-vertical'
             type='range'
             min='0'
             max='100'
-            onChange={handleBottomLeftRy}
+            onChange={(e) => handleSliderChange(e, setBottomLeftRy)}
           />
           </div>
           <div 
@@ -139,14 +87,14 @@ function App() {
             type='range'
             min='0'
             max='100'
-            onChange={handleTopRightRy}
+            onChange={(e) => handleSliderChange(e, setTopRightRy)}
           />
           <input
             className='slider invert-vertical'
             type='range'
             min='0'
             max='100'
-            onChange={handleBottomRightRy}
+            onChange={(e) => handleSliderChange(e, setBottomRightRy)}
           />
           </div>
         </div>
@@ -157,14 +105,14 @@ function App() {
             type='range'
             min='0'
             max='100'
-            onChange={handleBottomLeftRx}
+            onChange={(e) => handleSliderChange(e, setBottomLeftRx)}
           />
           <input
             className='slider invert-horizontal'
             type='range'
             min='0'
             max='100'
-            onChange={handleBottomRightRx}
+            onChange={(e) => handleSliderChange(e, setBottomRightRx)}
           />
         </div>
       </div>
